@@ -2,4 +2,16 @@
   table-view works!
 </p>
 
-<app-table-widget></app-table-widget>
+<!-- <app-table-widget></app-table-widget> -->
+
+<app-prime-table
+Description="Car Results"
+[Cols]="cols"
+[(GridData)]="carsData"
+[HasCheckBoxMultiSelect]="true"
+[(selectedRowsData)]="selectedRowsData"
+(RowsSelectionChange)="OnRowsSelectionChange($event)"
+[HasFilters]='true'
+(RowLeftClick)="OnRowClicked($event)"
+
+></app-prime-table>

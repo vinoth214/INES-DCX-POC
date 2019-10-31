@@ -2,3 +2,90 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* You can add global styles to this file, and also import other style files */
+
+.drop-down-full-width .ui-dropdown {
+    width: 100% !important;
+}
+
+.calender-full-width .ui-calendar {
+    width: 100% !important;
+}
+.editable-column-full-width .ui-inputtext {
+    width: 100% !important;
+}
+
+.multiselect-dropdown-full-width .ui-multiselect {
+  width: 100% !important;
+}
+.filter .ui-multiselect-label {
+  height: 21px;
+  padding: 2px 2px 2px 2px !important;
+  font-weight: normal;
+  font-size: .8em;
+}
+body .ui-table .ui-table-tbody > tr > td {
+    padding: 3px 8px 3px 8px;
+    font-size: 12px;
+  }
+  body .ui-table .ui-table-tbody > tr {
+    height: 27px;
+  }
+  body .ui-table .ui-table-tbody > tr:first-child {
+    height: 26px;
+  }
+  body .ui-table .ui-table-thead > tr > th {
+    padding: 3px 8px 3px 8px;
+    font-size: 13px;
+    word-wrap: break-word;
+  }
+  body .ui-table .ui-table-thead > tr > th.ui-sortable-column {
+    padding-right: 22px;
+  }
+  .highlight {
+    background-color:yellow;
+  }
+
+  .ui-table .ui-table-sort-icon {
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    margin-top: -9px;
+  }
+  .ui-table .ui-table-sort-icon i {
+    display: inline-block;
+  }
+
+  .pi-sort:before {
+    content: '' !important;
+  }
+  .ui-table .ui-table-sort-icon {
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    margin-top: -9px;
+  
+    /* // float: right !important;
+    // line-height: 30px; // height taken from OPs plunker */
+  }
+  .ui-table .ui-table-sort-icon i {
+    display: inline-block;
+  }
+
+  tr.selectedRow {
+    background-color: #22bf84 !important;
+    color: white !important;
+  }
+
+  .ui-table .ui-sortable-column.ui-state-highlight {
+    background-color: #22bf84 !important;
+  }
+  /* .ui-table-tbody> tr> td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
+  } */

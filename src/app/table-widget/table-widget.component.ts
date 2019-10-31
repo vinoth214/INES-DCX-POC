@@ -4,22 +4,6 @@ import { MatTableDataSource } from '@angular/material/table';
 
 
 
-
-// export class ColumnDef {
-//   public constructor(init?: Partial<ColumnDef>) {
-//     Object.assign(this, init);
-//   }
-
-//   public header: string;
-//   public field: string;
-//   public type ?= 'text';
-//   public colWidthPercentage: string;
-//   public filterMatchMode ?= 'contains';
-//   public visible ?= true;
-//   public isEditable ?= false;
-//   public dropDownValName?: string = null;
-// }
-
 export interface PeriodicElement {
   name: string;
   position: number;
