@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 
 
 
@@ -42,13 +44,14 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./table-widget.component.css']
 })
 export class TableWidgetComponent<T> implements OnInit {
-
+  @ViewChild(MatSort) sort: MatSort;
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA;
+  dataSource = new MatTableDataSource(ELEMENT_DATA);
 
   constructor() { }
 
   ngOnInit() {
+    this.dataSource.sort = this.sort;
   }
 
 }
