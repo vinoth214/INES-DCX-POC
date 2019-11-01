@@ -4,12 +4,12 @@
   <p-table #grid [value]="gridData" [dataKey]="dataKey" [columns]="_Cols" [resizableColumns]="true" (onColResize)="onColResize($event)"  columnResizeMode="expand"
   [scrollable]="true" [scrollHeight]="scrollHeight"  selectionMode="multiple" rowSelectMode="checkbox" [(selection)]="selectedRowsData" 
   (onRowSelect)="onRowSelect($event)" (onRowUnselect)="onRowUnselect($event)" (onHeaderCheckboxToggle)="onHeaderCheckboxToggle($event)"
-  [rowTrackBy]="rowTrackByFunction" [paginator]="isPaginator" [rows]="rowsPerPage"  >
+  [rowTrackBy]="rowTrackByFunction" [paginator]="isPaginator" [rows]="rowsPerPage"  [rowsPerPageOptions]="[10,20,30]" >
 
       <ng-template pTemplate="colgroup" let-columns>
           <colgroup>
-              <col *ngIf="HasCheckBoxMultiSelect" style="width: 30px; padding: 2px;">
-              <!--  <col *ngIf="HasPinUnpin" style="width: 30px"> -->
+              <col *ngIf="HasCheckBoxMultiSelect" style="width: 40px; padding: 2px;">
+               <col *ngIf="HasPinUnpin" style="width: 30px">
               <ng-container *ngFor="let col of columns">
                   <col *ngIf="col.visible" [style.width]="col.colWidthPercentage">
               </ng-container>
@@ -21,7 +21,7 @@
                 <!-- <div style="position:absolute; z-index:100; margin-top: -12px" class="filter"> -->
                 <div class="filter">
         
-                  <p-multiSelect *ngIf="col.codeList == null && col.filterMatchMode === 'in'" appendTo="body"
+                  <p-multiSelect *ngIf="col.filterMatchMode === 'in'" appendTo="body"
                     class="multiselect-dropdown-full-width" [options]="FieldFilterOptions(col)" defaultLabel="--All--"
                     [filter]="false" [dataKey]="value" [maxSelectedLabels]="0" selectedItemsLabel="{0} items"
                     [(ngModel)]="filterSelectItems[col.field + '_defaults']" [name]="col.field"
@@ -30,7 +30,7 @@
         
         
                 </div>
-                <select style="width: 100%;" *ngIf="col.codeList == null && col.filterMatchMode === 'equals'"
+                <select style="width: 100%;" *ngIf="col.filterMatchMode === 'equals'"
                   (change)="onSelectChange($event, grid, col)" [(ngModel)]="filterSelectItems[col.field + '_defaults']">
                   <option value="--All--">--All--</option>
                   <option *ngFor="let item of FieldFilterOptions(col)" value="{{item.value}}">{{item.label}}</option>
@@ -38,6 +38,10 @@
 
                 <input  style="width: 100%;" *ngIf="col.filterMatchMode === 'contains'" pInputText type="text"
                   (input)="grid.filter($event.target.value, col.field, col.filterMatchMode)">
+
+                  <p-calendar *ngIf="col.filterMatchMode === 'date'"  class="editable-column-full-width calender-full-width " appendTo="body"
+                                          (onSelect)="grid.filter($event.value, col.field, 'date')" [monthNavigator]="true" [showIcon]="false"
+                                          [yearNavigator]="true" yearRange="2000:2030" dateFormat="dd-M-yy"></p-calendar>
               </th>
             </ng-template>
 

@@ -14,6 +14,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 .editable-column-full-width .ui-inputtext {
     width: 100% !important;
+    height: 21px !important;
 }
 
 .multiselect-dropdown-full-width .ui-multiselect {
@@ -76,12 +77,25 @@ body .ui-table .ui-table-tbody > tr > td {
   }
 
   tr.selectedRow {
-    background-color: #22bf84 !important;
+    background-color: #00915a !important;
     color: white !important;
   }
 
   .ui-table .ui-sortable-column.ui-state-highlight {
-    background-color: #22bf84 !important;
+    background-color: #00915a !important;
+  }
+
+  .ui-multiselect-panel .ui-multiselect-items .ui-multiselect-item.ui-state-highlight {
+    background-color: #00915a !important;
+  }
+
+  body .ui-chkbox .ui-chkbox-box.ui-state-active {
+    border-color: #00915a !important;
+    background-color:#00915a !important;
+  }
+
+  body .ui-paginator .ui-paginator-pages .ui-paginator-page.ui-state-active {
+    background-color: #00915a !important;
   }
   /* .ui-table-tbody> tr> td {
     white-space: nowrap;

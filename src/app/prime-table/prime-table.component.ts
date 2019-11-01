@@ -105,7 +105,7 @@ export class PrimeTableComponent<T> implements OnInit {
   }
 
   onselectDatePicker(date: Date, index, filed) {
-    this.gridData[index][filed] = DateFns.format(date, 'DD-MMM-YYYY');
+    this.gridData[index][filed] = DateFns.format(date, 'dd-MMM-yyyy');
     this.gridDataChange.emit(this.gridData);
   }
 

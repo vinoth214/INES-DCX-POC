@@ -14,8 +14,8 @@
     "alertData":[
         {"status":"open", "1stNotificationDate":1562698799643, "fund":"Teal Blue Fund", "SubFund":"TB Sub-Fund One", "AssetPocket":"TB Asset Pocket One", "AlertType":"Investment Compliance", "1stEventDate":1562698799643, "AlertId":"FR TBIC07725", "comments":"None"},
         {"status":"open", "1stNotificationDate":1562698799643, "fund":"Teal Blue Fund", "SubFund":"TB Sub-Fund One", "AssetPocket":"TB Asset Pocket One", "AlertType":"Investment Compliance", "1stEventDate":1562698799643, "AlertId":"FR TBIC07725", "comments":"None"},
-        {"status":"open", "1stNotificationDate":1562698799643, "fund":"Teal Blue Fund", "SubFund":"TB Sub-Fund One", "AssetPocket":"TB Asset Pocket One", "AlertType":"Investment Compliance", "1stEventDate":1562698799643, "AlertId":"FR TBIC07725", "comments":"None"},
-        {"status":"open", "1stNotificationDate":1562698799643, "fund":"Teal Blue Fund", "SubFund":"TB Sub-Fund One", "AssetPocket":"TB Asset Pocket One", "AlertType":"Investment Compliance", "1stEventDate":1562698799643, "AlertId":"FR TBIC07725", "comments":"None"},
+        {"status":"closed", "1stNotificationDate":1562698799643, "fund":"Teal Blue Fund", "SubFund":"TB Sub-Fund One", "AssetPocket":"TB Asset Pocket One", "AlertType":"Investment Compliance", "1stEventDate":1562698799643, "AlertId":"FR TBIC07725", "comments":"None"},
+        {"status":"escalated lvl1", "1stNotificationDate":1562698799643, "fund":"Teal Blue Fund", "SubFund":"TB Sub-Fund One", "AssetPocket":"TB Asset Pocket One", "AlertType":"Investment Compliance", "1stEventDate":1562698799643, "AlertId":"FR TBIC07725", "comments":"None"},
         {"status":"open", "1stNotificationDate":1562698799643, "fund":"Teal Blue Fund", "SubFund":"TB Sub-Fund One", "AssetPocket":"TB Asset Pocket One", "AlertType":"Investment Compliance", "1stEventDate":1562698799643, "AlertId":"FR TBIC07725", "comments":"None"}
     ]
 }

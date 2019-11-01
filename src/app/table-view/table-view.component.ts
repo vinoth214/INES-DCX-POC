@@ -21,15 +21,15 @@ export class TableViewComponent implements OnInit {
   // ];
 
   public cols: ColumnDef[] = [
-      {header: 'Status', field: 'status', filterMatchMode: 'in', colWidthPercentage: '10%', type: 'text'},
-      {header: '1st Notification Date', field: '1stNotificationDate', filterMatchMode: '', colWidthPercentage: '10%', type: 'date'},
-      {header: 'Fund', field: 'fund', filterMatchMode: 'in', colWidthPercentage: '10%', type: 'text'},
-      {header: 'Sub-Fund', field: 'SubFund', filterMatchMode: 'in', colWidthPercentage: '10%', type: 'text'},
-      {header: 'Asset Pocket', field: 'AssetPocket', filterMatchMode: 'in', colWidthPercentage: '10%', type: 'text'},
-      {header: 'Alert Type', field: 'AlertType', filterMatchMode: 'in', colWidthPercentage: '10%', type: 'text'},
-      {header: '1st Event Date', field: '1stEventDate', filterMatchMode: '', colWidthPercentage: '10%', type: 'date'},
-      {header: 'Alert Id', field: 'AlertId', filterMatchMode: 'in', colWidthPercentage: '10%', type: 'text'},
-      {header: 'Comments', field: 'comments', filterMatchMode: 'in', colWidthPercentage: '10%', type: 'text'}
+      {header: 'Status', field: 'status', filterMatchMode: 'in', colWidthPercentage: '120px', type: 'text'},
+      {header: '1st Notification Date', field: '1stNotificationDate', filterMatchMode: 'date', colWidthPercentage: '200px', type: 'date'},
+      {header: 'Fund', field: 'fund', filterMatchMode: 'in', colWidthPercentage: '150px', type: 'text'},
+      {header: 'Sub-Fund', field: 'SubFund', filterMatchMode: 'in', colWidthPercentage: '150px', type: 'text'},
+      {header: 'Asset Pocket', field: 'AssetPocket', filterMatchMode: 'in', colWidthPercentage: '150px', type: 'text'},
+      {header: 'Alert Type', field: 'AlertType', filterMatchMode: 'in', colWidthPercentage: '190px', type: 'text'},
+      {header: '1st Event Date', field: '1stEventDate', filterMatchMode: 'date', colWidthPercentage: '160px', type: 'date'},
+      {header: 'Alert Id', field: 'AlertId', filterMatchMode: 'in', colWidthPercentage: '120px', type: 'text'},
+      {header: 'Comments', field: 'comments', filterMatchMode: 'in', colWidthPercentage: '140px', type: 'text'}
   ];
 
   ngOnInit() {
