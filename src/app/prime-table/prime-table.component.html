@@ -93,6 +93,12 @@
               </td>
           </tr>
       </ng-template>
+      <ng-template #defaultTableCell let-rowData="rowData" let-column="column" let-colText="colText">
+          <td [title]="colText">
+            <span *ngIf="column.type !== 'icon'">{{colText}}</span>
+            <img *ngIf="column.type === 'icon'" src="assets/image/icons/{{colText}}" />
+          </td>
+        </ng-template>
 
       <ng-template pTemplate="body" let-rowData let-ri="rowIndex">
           <tr [ngClass]="{selectedRow: rowData.__selected}" (click)="OnRowClick($event,ri, rowData)">
@@ -103,7 +109,9 @@
                   <ng-container *ngIf="col.visible">
                       <ng-container *ngIf="!col.isEditable">
                           <td class="ui-resizable-column">
-                              {{getValueAsString(rowData, col)}}
+                              <!-- {{getValueAsString(rowData, col)}} -->
+                             <ng-container *ngTemplateOutlet="tdTemplate ? tdTemplate : defaultTableCell; context: { rowData: rowData, column: col, colText: getValueAsString(rowData, col) }">
+                             </ng-container>
                           </td>
                       </ng-container>
                   </ng-container>

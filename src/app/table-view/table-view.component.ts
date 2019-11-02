@@ -21,7 +21,7 @@ export class TableViewComponent implements OnInit {
   // ];
 
   public cols: ColumnDef[] = [
-      {header: 'Status', field: 'status', filterMatchMode: 'in', colWidthPercentage: '120px', type: 'text'},
+      {header: 'Status', field: 'status', filterMatchMode: 'in', colWidthPercentage: '140px', type: 'text'},
       {header: '1st Notification Date', field: '1stNotificationDate', filterMatchMode: 'date', colWidthPercentage: '200px', type: 'date'},
       {header: 'Fund', field: 'fund', filterMatchMode: 'in', colWidthPercentage: '150px', type: 'text'},
       {header: 'Sub-Fund', field: 'SubFund', filterMatchMode: 'in', colWidthPercentage: '150px', type: 'text'},

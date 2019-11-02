@@ -97,6 +97,10 @@ body .ui-table .ui-table-tbody > tr > td {
   body .ui-paginator .ui-paginator-pages .ui-paginator-page.ui-state-active {
     background-color: #00915a !important;
   }
+
+ .ui-dropdown-panel .ui-dropdown-items .ui-dropdown-item.ui-state-highlight, body .ui-dropdown-panel .ui-dropdown-items .ui-dropdown-item-group.ui-state-highlight {
+  background-color: #00915a !important;
+  }
   /* .ui-table-tbody> tr> td {
     white-space: nowrap;
     overflow: hidden;

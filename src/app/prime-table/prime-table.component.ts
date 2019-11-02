@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter, ViewChild, ElementRef, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ViewChild, ElementRef, ChangeDetectorRef, TemplateRef } from '@angular/core';
 import { MenuItem, LazyLoadEvent, SelectItem, ConfirmationService } from 'primeng/components/common/api';
 import { DropdownValuesService } from '../service/dropdown-values.service';
 
@@ -53,9 +53,13 @@ export class PrimeTableComponent<T> implements OnInit {
   @Input() public Description = 'Records';
   @Input() public dataKey = 'id';
   @Input() public isLoading: boolean;
-  @Input() public scrollHeight = '300px';
-  @Input() public rowsPerPage = 5;
+  @Input() public scrollHeight = '500px';
+  @Input() public rowsPerPage = 10;
   @Input() public isPaginator = true;
+// Used to Customize the <td> output if necessary! e.g. when you want RED text based on some conditions
+  @Input() tdTemplate: TemplateRef<any>;
+// Used to Customize the <th> header row for column wise filters if necessary!
+  @Input() filterTemplate: TemplateRef<any>;
   @Input() public RightClickHandler: (rowData: T, menuItems: MenuItem[]) => void;  
   @Input() public HasFilters: boolean; // Flag to say if table has a header row with filter
   @Input() public HasCheckBoxMultiSelect: boolean;

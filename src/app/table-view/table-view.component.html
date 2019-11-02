@@ -12,7 +12,39 @@ Description="Car Results"
 [(selectedRowsData)]="selectedRowsData"
 (RowsSelectionChange)="OnRowsSelectionChange($event)"
 [HasFilters]='true'
-(RowLeftClick)="OnRowClicked($event)"
+[tdTemplate]="customTableCell"
+(RowLeftClick)="OnRowClicked($event)">
 
 
-></app-prime-table>
+
+</app-prime-table>
+
+<ng-template #customTableCell let-rowData="rowData" let-column="column" let-colText="colText">
+    <td [style.width]="column.colWidthPercentage" [title]="colText" *ngIf="column.header==='Status'">  
+        <ng-template #defaultCell>
+            {{colText}}
+        </ng-template>  
+        <ng-container >
+            <span *ngIf="column.header === 'Status'&& rowData['status'] !=='open'; else defaultCell" style="color:red">
+                {{colText}}
+              </span>
+        </ng-container>
+       
+    </td>
+
+    <td [style.width]="column.colWidthPercentage" [title]="colText" *ngIf="column.header==='Comments'"> 
+        <!-- <i class="far fa-comment-alt"></i>          -->
+        
+            <span [ngSwitch]="rowData['comments']">
+                <span *ngSwitchCase="'Read'" style="color:green"><i class="far fa-comment-alt"></i>  {{colText}}</span>
+                <span *ngSwitchCase="'Unread'" style="color:orange"><i class="far fa-comment-alt"></i> {{colText}}</span>
+                <span *ngSwitchDefault><i class="far fa-comment-alt"></i> {{colText}}</span>
+              </span>
+    </td>
+
+    <td *ngIf="column.header !=='Comments' && column.header !=='Status'">
+        <span>
+                {{colText}}
+        </span>
+    </td>
+  </ng-template>

@@ -19,6 +19,7 @@ import { CheckboxModule } from 'primeng/checkbox';
 import {MultiSelectModule} from 'primeng/multiselect';
 import {PaginatorModule} from 'primeng/paginator';
 import { TableModule } from 'primeng/table';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
